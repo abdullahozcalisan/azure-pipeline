@@ -7,6 +7,7 @@ trigger:
 #       operatingSystem: 'ubuntu-latest'
 #     macos:
 #       operatingSystem: 'macos-latest'
+ 
 
 pool:
   vmImage: ubuntu-latest
@@ -19,7 +20,7 @@ stages:
     - bash: echo BuildJob
 - stage: DevDeploy
   jobs:
-  - deployment: DevDeployJob
+  - deployment: DevDeployJob  #deployments can be used with strategy and you can create env in dep. (you can make this dep. mandatory to approve)
     environment: Dev
     strategy: 
       runOnce: 
@@ -34,4 +35,4 @@ stages:
       runOnce: 
         deploy: 
           steps: 
-          - script: echo deploy to QA        
+          - script: echo deploy to QA         
