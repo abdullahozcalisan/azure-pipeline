@@ -8,7 +8,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello world this im my first pipeline but its not wont be last!
+- script: echo Hello world this is my first pipeline but its wont be last!
   displayName: 'Run a one-line script'
 
 - script: |
